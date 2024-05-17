@@ -1,0 +1,869 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-height: 59px;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background-color: #000;
+}
+#preloader{
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+ background: #000 url(https://media.tenor.com/e2-vVOgoTO0AAAAM/glass-wine-glass.gif)no-repeat center center;
+ background-size: 24%;
+ position: fixed;
+
+}
+.logo {
+  width: 150px;
+  /* height: 100vh; */
+  margin: 19px 51px;
+  padding: 10px 8px;
+}
+
+#header {
+  width: 100%;
+  margin: -18px 4px;
+  padding: 1px 13px;
+}
+iframe{
+  width: 0%;
+  height: 0%;
+}
+.container {
+  height: 100vh;
+  /* background-color: #000; */
+  padding: 1px;
+  width: 100%;
+}
+
+nav {
+  background: #000;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logo main-nav secondary-nav";
+  margin: 13px -21px;
+}
+
+.sec-nav {
+  left: 290px;
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  grid-area: main-nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  right: 33%;
+  top: 0px;
+}
+
+nav > ul > li {
+  display: inline;
+  list-style: none;
+  margin: 14px 14px;
+  position: relative;
+  left: 55px;
+}
+
+nav > ul > li > a {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 6px 21px;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  font-weight: 700;
+}
+
+ul li.Home a {
+  color: rgb(133 98 98);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+nav ul li a:hover {
+  color: rgb(133 98 98);
+}
+
+.secondary {
+  padding: 10px 10px;
+}
+
+/* ---------------------------------------------- */
+
+.header-text {
+  /* border: 2px solid rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px 3px; */
+  /* height: 620px; */
+  margin-right: 21px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header-text::before {
+  content: "";
+  margin-right: 0px;
+  position: absolute;
+  background: url(edge2edge-media-aaSmG4bj25I-unsplash.jpg) no-repeat center
+    center / cover;
+  height: 561px;
+  top: 83px;
+  left: 37%;
+  width: 27%;
+  z-index: 1;
+  opacity: 0.89;
+}
+
+.tittle-move {
+  z-index: 5;
+  /* border: 2px solid royalblue; */
+  position: absolute;
+  right: 31%;
+  top: 80px;
+  padding: 77px 16px;
+  width: 28%;
+}
+.tittle {
+  color: #fafafa;
+  line-height: 40px;
+}
+
+.tittle-text {
+  color: rgb(133 98 98);
+  display: block;
+  opacity: 00;
+  font-size: 14px;
+  font-weight: 800;
+  animation: revealText 0.5s forwards;
+  font-family: "Lato", sans-serif;
+}
+
+.tittle-second {
+  animation-delay: 0.175s;
+  font-family: "Playfair Display", serif;
+  color: #ffff;
+  font-weight: 300;
+  font-size: 41px;
+  font-style: italic;
+}
+
+.tittle-third {
+  animation-delay: 0.25s;
+  font-family: sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  margin-top: 22px;
+  padding-left: 2px;
+}
+
+@keyframes revealText {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.section {
+  padding: 80px 80px;
+  padding-bottom: 0px;
+  display: grid;
+  position: relative;
+}
+
+.section-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-img {
+  flex-basis: 40%;
+}
+
+.wine {
+  position: relative;
+  right: 36px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.msg-img {
+  width: 100%;
+  position: relative;
+  left: 13%;
+}
+.message {
+  right: -51px;
+  flex-basis: 71%;
+  position: relative;
+}
+
+.from {
+  color: rgb(133 98 98);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  float: right;
+  position: relative;
+  right: 50%;
+  letter-spacing: 5px;
+  margin: 17px 7px;
+  top: 126px;
+}
+
+.message > h1 {
+  display: inline-block;
+  color: rgba(255, 255, 255);
+  position: relative;
+  padding: 57px 1px;
+  font-size: 41px;
+  font-weight: 400;
+  top: 54px;
+}
+
+#parah {
+  margin-top: 41px;
+  text-align: left;
+  letter-spacing: 2px;
+  left: 45px;
+  padding-right: -1px;
+  font-size: 12px;
+  line-height: 31px;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+  color: #898282;
+  text-transform: none;
+}
+
+.sign-img {
+  margin: 21px 102px;
+}
+
+section {
+  background-color: #121212;
+  /* border: 2px solid white; */
+  width: 100%;
+  height: 122vh;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 43px -4px;
+  bottom: -21px;
+}
+
+.card-1st {
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right top,
+    #212020,
+    #2a2727,
+    #342e2e,
+    #3e3535,
+    #483c3c
+  );
+  color: #fff;
+  width: 38%;
+  margin-left: 117px;
+  height: 86vh;
+  position: relative;
+  top: 12%;
+  left: 19px;
+}
+
+.we {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 41px;
+  font-family: "Dosis", sans-serif;
+  position: relative;
+  right: 20%;
+  bottom: 26px;
+  text-align: center;
+  line-height: 52px;
+  margin: -45px;
+}
+
+.cur {
+  text-align: center;
+  color: rgb(98 76 76);
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  right: 18%;
+  bottom: 80px;
+}
+
+.wine-img {
+  position: relative;
+  width: 40%;
+  margin: 0px 30px;
+  height: 93%;
+  top: 4%;
+}
+
+.text-1st {
+  position: relative;
+  left: 15%;
+  top: 31%;
+}
+
+.grapes {
+  position: absolute;
+  right: 45%;
+  width: 32px;
+  top: -108%;
+}
+
+.dev {
+  position: absolute;
+  top: 47%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----------------------------------------------- */
+.second-count {
+  background-color: #000;
+}
+.count {
+  background-color: #000;
+  top: 125px;
+  margin: 89px 3px;
+  width: 100%;
+  /* display: flex; */
+  justify-content: space-between;
+  position: relative;
+}
+
+.red-bottle-dark {
+  top: 14px;
+  width: 81%;
+  height: 37%;
+  right: 34px;
+  position: relative;
+}
+
+.second-card {
+  background-color: #121212;
+  width: 36%;
+  height: 67%;
+  position: relative;
+  top: -28px;
+  left: -3px;
+  color: white;
+}
+
+.red,
+.h1 {
+  position: absolute;
+  top: 5%;
+  left: 26%;
+}
+
+.red {
+  line-height: 27px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: rgb(98 76 76);
+  font-weight: 700;
+  top: 19%;
+  left: 23%;
+}
+
+.h1 {
+  top: 24%;
+  left: 22%;
+  font-size: 37px;
+  color: #fff;
+  font-weight: 400;
+  font-style: inherit;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.under {
+  position: absolute;
+  list-style: none;
+  top: 40%;
+  left: 31%;
+  line-height: 2.5;
+}
+.under li {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 41px;
+}
+
+.under li::before {
+  content: "";
+  width: 37%;
+  position: absolute;
+  background: rgb(98 76 76);
+  height: 1px;
+  right: 118%;
+  margin: 19px 15px;
+}
+/* ---------------------------------------------------- */
+
+.counters {
+  position: absolute;
+  bottom: 29%;
+  left: 31%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.counters > div {
+  display: inline-block;
+  margin: 0px 79px;
+  line-height: 33px;
+}
+
+.counter > h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: rgb(133 98 98);
+  text-transform: capitalize;
+}
+
+.counter > h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  font-family: "Playfair Display", serif;
+  line-height: 115px;
+}
+
+.white {
+  position: relative;
+  left: 66px;
+  width: 83%;
+  height: 46%;
+}
+
+.num {
+  position: absolute;
+  left: 68%;
+}
+
+.second-count {
+  bottom: -26px;
+}
+
+.Login-bt {
+  line-height: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Playfair Display", sans-serif;
+}
+
+button {
+  position: relative;
+  top: 71%;
+  padding: 4px 5px;
+  color: white;
+  outline: none;
+  background: rgb(133, 98, 98);
+  border: 1px solid #000;
+  width: 35%;
+  cursor: pointer;
+  height: 54px;
+  right: -112px;
+  letter-spacing: 2px;
+}
+
+/* ------------------------------------------- */
+
+.box {
+  display: flex;
+  width: 94%;
+  background-color: #121211;
+  margin-left: 77px;
+  margin-right: 92px;
+  height: 650px;
+}
+
+.slide-6 {
+  width: 50%;
+}
+
+.tem {
+  width: 50%;
+}
+
+.text-card {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  top: 15%;
+}
+
+.text-card > h3 {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 27px;
+  color: rgb(133, 98, 98);
+  top: 15px;
+  position: relative;
+}
+
+.text-card > h1 {
+  font-size: 41px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 62px;
+  position: relative;
+  top: 10px;
+}
+
+.text-card > p {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 31px;
+  font-size: 16px;
+  padding: 92px;
+  top: 3px;
+  position: relative;
+}
+
+.card-bt {
+  top: 105px;
+  right: -186px;
+  font-size: 12px;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+}
+
+.second-bt {
+  left: -4px;
+  top: 7px;
+}
+
+.template {
+  right: -3%;
+  width: 84%;
+  margin: 33px;
+  margin-top: -91px;
+  z-index: 7;
+  position: elative;
+}
+
+.second-text-card {
+  top: 13%;
+}
+.second-text-card > h1 {
+  padding: 30px;
+  top: -16px;
+  line-height: 43px;
+}
+
+.second-text-card > p {
+  margin-top: -51px;
+  padding: 91px;
+  right: -4px;
+}
+/* --------------------------------------------------------------- */
+
+.third-section {
+  width: 100%;
+  height: 100vh;
+}
+
+.estate {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 18%;
+}
+
+.estate::before {
+  content: "";
+  margin-right: 0px;
+  position: absolute;
+  background: url(slid/gallery-bt.jpg) no-repeat center center / cover;
+  height: 81px;
+  top: 138px;
+  left: 29%;
+  width: 54%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.estate > h3 {
+  color: rgb(133, 98, 98);
+  font-family: "lato", sans-serif;
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 700;
+}
+.estate > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 41px;
+  line-height: normal;
+  font-weight: 400;
+}
+.estate > p {
+  font-family: "lato", sans-serif;
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 400;
+  padding: 69px;
+}
+.gallery-bt {
+  width: 14%;
+  margin: 0px 14px;
+  top: -3px;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery-bt:hover {
+  background-color: #000;
+}
+
+.gallery {
+  background-color: #000;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery:hover {
+  background-color: rgb(133, 98, 98);
+}
+
+.newsletter {
+  height: 378px;
+  text-align: center;
+}
+
+.newsletter > h3 {
+  font-family: "lato", serif;
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 700;
+  color: rgb(133, 98, 98);
+}
+
+.newsletter > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 41px;
+  line-height: normal;
+  font-weight: 400;
+  color: white;
+}
+
+.newsletter > .input-group {
+  left: 22%;
+  position: relative;
+  margin: 53px 36px;
+  width: 51%;
+  line-height: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+input {
+  color: #eee;
+  width: 116%;
+  padding: 16px;
+  outline: 0;
+  border: 1px solid #252323;
+  font-size: 16px;
+  background: transparent;
+  height: 75px;
+  position: relative;
+  left: -58px;
+  top: 9px;
+}
+
+.newsletter-bt {
+  left: 48%;
+  width: 132px;
+  top: -66px;
+  height: 75px;
+  border: 1px solid #252323;
+  border-left: #000;
+  color: white;
+  background-color: #000;
+  line-height: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "lato", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.newsletter-bt:hover {
+  color: rgb(133, 98, 98);
+}
+
+/* ----------------------------------------------------------- */
+.footer {
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  color: #eee;
+  height: 89vh;
+}
+
+.fot-text {
+  color: rgb(133 98 98);
+  position: relative;
+  margin-top: 21px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 11px;
+  font-family: "Lato", sans-serif;
+  top: -46px;
+  right: -129px;
+}
+
+.fot-text-1 {
+  position: relative;
+  top: -44px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  color: #eee;
+}
+.text {
+  color: rgb(133 98 98);
+  position: relative;
+  top: 179px;
+}
+
+/* ------------------------------------------------------ */
+.second-footer {
+  height: 304px;
+  width: 100%;
+}
+.copyright {
+  font-family: "lato", sans-serif;
+  position: relative;
+  right: 36px;
+  left: 84%;
+  font-size: 12px;
+  top: 88%;
+  color: #3f3d3d;
+  font-weight: 900;
+}
+
+.social-icons {
+  display: flex;
+  left: -18%;
+  position: relative;
+  align-items: center;
+  top: 92%;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 41px;
+  color: #3f3d3d;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+    left: 29%;
+  position: relative;
+}
+
+.social-icons a:hover {
+  color: rgb(133, 98, 98);
+}
+
+.first-nav-footer {
+  
+  color: #3f3d3d;
+  width: 13%;
+  left: 22%;
+  position: relative;
+  font-family: "lato", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.first-nav-footer > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  position: relative;
+  right: 9%;
+  top: -5px;
+}
+
+.first-nav-footer > ul > li {
+  display: inline;
+  list-style: none;
+  margin: 11px 21px;
+  position: relative;
+  left: -12px;
+  top: -1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+}
+
+.first-nav-footer li:first-child{
+  left: 3px;
+}
+
+
+.first-nav-footer ul li:hover{
+  color: rgb(133, 98, 98);
+}

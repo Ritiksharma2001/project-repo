@@ -1,0 +1,366 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-height: 59px;
+}
+
+html,
+body {
+  background-color: #121212;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.logo {
+  width: 150px;
+  margin: 19px 9px;
+  padding: 10px 8px;
+}
+
+#header {
+  width: 98%;
+  margin: -18px 4px;
+  padding: 1px 13px;
+}
+
+.container {
+    background: #000;
+    width: 100%;
+    height: 62vh;
+
+}
+
+nav {
+  right: -2px;
+  background: #000;
+  width: 100%;
+  z-index: 9999;
+  position: fixed;
+  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logo main-nav secondary-nav";
+  margin: 13px 0px;
+  /* z-index: 0; */
+  
+}
+.sec-nav {
+  left: 341px;
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  grid-area: main-nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  right: 27%;
+  top: 2px;
+}
+
+nav > ul > li {
+  display: inline;
+  list-style: none;
+  margin: 14px 9px;
+  position: relative;
+  left: 55px;
+}
+
+nav > ul > li > a {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 6px 21px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+ul li.Home a {
+  color: rgb(133 98 98);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+nav ul li a:hover {
+  color: rgb(133 98 98);
+}
+
+.secondary {
+  padding: 10px 10px;
+}
+.acc {
+    height: 100vh;
+    /* border: 2px solid; */
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    color: #eee;
+    height: 487px;
+  }
+  
+  h1 {
+    background-color: #121212;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-style: normal;
+    position: relative;
+    top: 38px;
+  }
+  
+
+
+.input-group {
+    top: 39%;
+    left: 92px;
+    position: relative;
+    margin: 52px 37px;
+    width: 46%;
+    line-height: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+input {
+  color: #eee;
+  width: 100%;
+  padding: 16px;
+  outline: 0;
+  border: 1px solid #252323;
+  font-size: 16px;
+  background: transparent;
+}
+
+
+label {
+  letter-spacing: 4px;
+  height: 100%;
+  position: absolute;
+  left: -7px;
+  top: -37px;
+  padding: 10px;
+  color: white;
+  cursor: text;
+}
+
+p{
+    
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    top: 32%;
+    position: relative;
+    left: 10%;
+}
+.Login-bt {
+    line-height: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  button {   
+     position: relative;
+    top: 115px;
+    padding: 4px 5px;
+    color: white;
+    outline: none;
+    background: transparent;
+    border: 1px solid #000;
+    width: 24%;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    height: 54px;
+    right: -170px;
+    letter-spacing: 2px;
+  }
+  
+  button:hover {
+    background-color: rgb(133, 98, 98);
+    color: #fff;
+  }
+  .footer {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    color: #eee;
+    height: 89vh;
+  }
+  
+  .fot-text {
+    color: rgb(133 98 98);
+    position: relative;
+    margin-top: 21px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 11px;
+    font-family: "Lato", sans-serif;
+    top: -46px;
+    right: -129px;
+  }
+  
+  .fot-text-1 {
+    position: relative;
+    top: -44px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    color: #eee;
+  }
+  .text {
+    color: rgb(133 98 98);
+    position: relative;
+    top: 179px;
+  }
+  
+  /* ------------------------------------------------------ */
+  .footer {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    color: #eee;
+    height: 89vh;
+  }
+  
+  .fot-text {
+    color: rgb(133 98 98);
+    position: relative;
+    margin-top: 21px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 11px;
+    font-family: "Lato", sans-serif;
+  left: 0px;
+    top: -46px;
+  
+    text-align: center;
+  }
+  
+  .fot-text-1 {
+    position: relative;
+    top: -44px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    color: #eee;
+  }
+  .text {
+    color: rgb(133 98 98);
+    position: relative;
+    top: 179px;
+    
+  }
+  
+  /* ------------------------------------------------------ */
+  .second-footer {
+    height: 298px;
+    width: 91%;
+}
+  .copyright {
+    font-family: "lato", sans-serif;
+    position: relative;
+    right: 36px;
+    left: 84%;
+    font-size: 12px;
+    top: 88%;
+    color: #3f3d3d;
+    font-weight: 900;
+  }
+  
+  .social-icons {
+    display: flex;
+    left: -24%;
+    position: relative;
+    align-items: center;
+    top: 92%;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 41px;
+    color: #3f3d3d;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+      left: 24%;
+    position: relative;
+  }
+  
+  .social-icons a:hover {
+    color: rgb(133, 98, 98);
+  }
+  
+  .first-nav-footer {
+    
+    color: #3f3d3d;
+    width: 13%;
+    left: 22%;
+    position: relative;
+    font-family: "lato", sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+  }
+  
+  .first-nav-footer > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    right: 9%;
+    top: -5px;
+  }
+  
+  .first-nav-footer > ul > li {
+    display: inline;
+    list-style: none;
+    margin: 11px 21px;
+    position: relative;
+    left: -12px;
+    top: -1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  
+  }
+  
+  .first-nav-footer li:first-child{
+    left: 3px;
+  }
+  
+  
+  .first-nav-footer ul li:hover{
+    color: rgb(133, 98, 98);
+  }

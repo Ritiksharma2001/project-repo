@@ -1,0 +1,117 @@
+/* Your existing CSS */
+
+/* Define CSS animations using keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to specific elements */
+.tittle-move,
+.tittle-text,
+.tittle-second,
+.tittle-third,
+.header-text::before,
+.section,
+.card,
+.we,
+.cur,
+.wine-img,
+.text,
+.grapes,
+.dev,
+.second-count {
+    opacity: 0; /* Initial opacity */
+    animation-duration: 4s; /* Duration of the animation */
+    animation-fill-mode: forwards; /* Animation retains its final state */
+}
+
+.tittle-move {
+    animation-name: slideInRight; /* Apply slide-in animation from right */
+}
+
+.tittle-text {
+    animation-name: slideInLeft; /* Apply slide-in animation from left */
+}
+
+.tittle-second {
+    animation-name: fadeIn; /* Apply fade-in animation */
+}
+
+.tittle-third {
+    animation-name: slideInRight; /* Apply slide-in animation from right */
+}
+
+.header-text::before {
+    animation-name: fadeIn; /* Apply fade-in animation */
+}
+
+.section {
+    animation-name: fadeIn; /* Apply fade-in animation */
+}
+
+.card {
+    animation-name: slideInLeft; /* Apply slide-in animation from left */
+}
+
+.we {
+    animation-name: fadeIn; /* Apply fade-in animation */
+}
+
+.cur {
+    animation-name: slideInRight; /* Apply slide-in animation from right */
+}
+
+.wine-img {
+    animation-name: slideInLeft; /* Apply slide-in animation from left */
+}
+
+.text {
+    animation-name: slideInRight; /* Apply slide-in animation from right */
+}
+
+.grapes {
+    animation-name: fadeIn; /* Apply fade-in animation */
+}
+
+.dev {
+    animation-name: slideInLeft; /* Apply slide-in animation from left */
+}
+
+.second-count {
+    animation-name: slideInRight; /* Apply slide-in animation from right */
+}
+
+
+.count {
+    opacity: 0; /* Initial opacity */
+    animation-name: fadeIn; /* Apply fade-in animation */
+    animation-duration: 1s; /* Duration of the animation */
+    animation-fill-mode: forwards; /* Animation retains its final state */
+}
