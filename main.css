@@ -631,7 +631,7 @@ button {
   content: "";
   margin-right: 0px;
   position: absolute;
-  background: url(slid/gallery-bt.jpg) no-repeat center center / cover;
+  background: url(gallery-bt.jpg) no-repeat center center / cover;
   height: 81px;
   top: 138px;
   left: 29%;
