@@ -22,8 +22,8 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 100;
- background: #000 url(https://media.tenor.com/e2-vVOgoTO0AAAAM/glass-wine-glass.gif)no-repeat center center;
- background-size: 24%;
+ background: #000 url(preloader.gif )no-repeat center center;
+ background-size: 100%;
  position: fixed;
 
 }

@@ -48,7 +48,7 @@
 .dev,
 .second-count {
     opacity: 0; /* Initial opacity */
-    animation-duration: 4s; /* Duration of the animation */
+    animation-duration: 1s; /* Duration of the animation */
     animation-fill-mode: forwards; /* Animation retains its final state */
 }
 
@@ -112,6 +112,6 @@
 .count {
     opacity: 0; /* Initial opacity */
     animation-name: fadeIn; /* Apply fade-in animation */
-    animation-duration: 1s; /* Duration of the animation */
+    animation-duration: 0.5s; /* Duration of the animation */
     animation-fill-mode: forwards; /* Animation retains its final state */
 }
