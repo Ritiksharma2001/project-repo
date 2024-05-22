@@ -17,6 +17,8 @@ body {
 
 body {
   background-color: #000;
+  height: 100vh;
+
 }
 
 
@@ -28,10 +30,9 @@ body {
 }
 
 
-#header {
+.header {
+  height: 100vh;
   width: 100%;
-  margin: -18px 4px;
-  padding: 1px 13px;
 }
 
 
@@ -40,19 +41,20 @@ body {
   /* background-color: #000; */
   padding: 1px;
   width: 100%;
+ 
 }
 
 nav {
   background: #000;
   width: 100%;
-  z-index: 99;
+  z-index: 9999;
   position: fixed;
   justify-content: space-between;
   display: grid;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "logo main-nav secondary-nav";
-  margin: 13px -21px;
+  margin: -2px -18px;
 }
 
 .sec-nav {
@@ -109,76 +111,64 @@ nav ul li a:hover {
 
 /* ---------------------------------------------- */
 
-.header-text {
-  /* border: 2px solid rebeccapurple; */
-  display: flex;
-  flex-direction: column;
-  /* margin: 10px 3px; */
-  /* height: 620px; */
-  margin-right: 21px;
-  justify-content: center;
-  align-items: center;
+
+.text-head{
+  position: relative;
+    top: 27px;
 }
 
-
-.header-text::before {
-  content: "";
-  margin-right: 0px;
-  position: absolute;
-  background: url(edge2edge-media-aaSmG4bj25I-unsplash.jpg) no-repeat center
-    center / cover;
-  height: 561px;
-  top: 83px;
-  left: 37%;
-  width: 27%;
-  z-index: 1;
-  opacity: 0.89;
-}
-
-.tittle-move {
-  z-index: 5;
-  /* border: 2px solid royalblue; */
-  position: absolute;
-  right: 31%;
-  top: 80px;
-  padding: 77px 16px;
-  width: 28%;
-}
-.tittle {
-  color: #fafafa;
-  line-height: 40px;
-}
-
-.tittle-text {
-  color: rgb(133 98 98);
-  display: block;
-  opacity: 00;
-  font-size: 14px;
-  font-weight: 800;
-  animation: revealText 0.5s forwards;
-  font-family: "Lato", sans-serif;
-}
-
-.tittle-second {
+.tittle-move {  
   animation-delay: 0.175s;
-  font-family: "Playfair Display", serif;
-  color: #ffff;
+  font-family: "Lato", sans-serif;
+  color: rgb(133, 98, 98);
+  font-weight: 800;
+  font-size: 14px;
+  position: relative;
+  top: 68px;
+  right: -21%;
+}
+
+
+.img{
+  background: url(edge2edge-media-aaSmG4bj25I-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 26%;
+  right: -37%;
+  position: relative;
+  top: 81px;
+}
+
+
+.img p {
+  color: white;
   font-weight: 300;
   font-size: 41px;
+  font-family: "Playfair Display", serif;
   font-style: italic;
+  position: relative;
+  top: 14%;
+  right: -26%;
+
+
+}
+.img :nth-child(2){
+  top: 71px;
+  right: -23%;
 }
 
-.tittle-third {
-  animation-delay: 0.25s;
-  font-family: sans-serif;
-  font-size: 55px;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  margin-top: 22px;
-  padding-left: 2px;
+.img :nth-child(3){
+  left: 22%;
+  font-family: "Playfair Display", serif;
+  font-size: 49px;
+  font-style: normal;
+  color: white;
+  top: 74px;
 }
 
-@keyframes revealText {
+
+ @keyframes revealText {
   from {
     transform: translateY(20px);
   }
@@ -761,7 +751,7 @@ input {
   line-height: 11px;
   font-family: "Lato", sans-serif;
   top: -46px;
-  right: -129px;
+  right: 2px;
 }
 
 .fot-text-1 {
