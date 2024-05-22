@@ -515,7 +515,7 @@ button {
   text-align: center;
   justify-content: center;
   position: relative;
-  top: 15%;
+  top: 21%;
 }
 
 .text-card > h3 {
@@ -524,7 +524,7 @@ button {
   font-weight: 700;
   line-height: 27px;
   color: rgb(133, 98, 98);
-  top: 15px;
+  top: 42px;
   position: relative;
 }
 
@@ -534,7 +534,8 @@ button {
   font-weight: 400;
   line-height: 62px;
   position: relative;
-  top: 10px;
+  top: 31px;
+
 }
 
 .text-card > p {
@@ -548,7 +549,7 @@ button {
 }
 
 .card-bt {
-  top: 105px;
+  top: 132px;
   right: -186px;
   font-size: 12px;
   font-family: "lato", sans-serif;
@@ -739,7 +740,7 @@ input {
   line-height: 11px;
   font-family: "Lato", sans-serif;
   top: -46px;
-  right: 2px;
+  right: -135px;
 }
 
 .fot-text-1 {

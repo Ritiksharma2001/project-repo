@@ -36,14 +36,13 @@ function checkVisibility() {
     }
 }
 
-function handleScroll() {
-    window.addEventListener('scroll', () => {
-        checkVisibility();
-    });
-}
+function signupAndRedirect() {
+    var email = document.getElementById("email").value;
 
-// Initial check on page load
-window.addEventListener('DOMContentLoaded', () => {
-    checkVisibility();
-    handleScroll();
-});
+    if (email !== "") {
+        // Redirect to the newsletter page
+        window.location.href = "newsletter_page.html";
+    } else {
+        alert("Please enter your email address.");
+    }
+}
