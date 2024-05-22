@@ -1,49 +1,49 @@
-   const counters1 = document.querySelectorAll(".counters span");
-    const counters2 = document.querySelectorAll(".second-count .counters span");
+const counters = document.querySelectorAll('.counters.num .counter span');
+let activated = false;
 
-    let activated = false;
-
-    function updateCounters(counters) {
-        counters.forEach(counter => {
-            const target = parseInt(counter.dataset.count);
-            let count = 0;
-            const difference = target / 50; // Adjust this value for smoother animation
-            const interval = setInterval(() => {
-                if (count < target) {
-                    count += difference;
-                    counter.innerText = Math.round(count);
-                } else {
-                    clearInterval(interval);
-                }
-            }, 10);
-        });
-    }
-
-    window.addEventListener("scroll", () => {
-        const rect1 = document.querySelector(".counters").getBoundingClientRect();
-        const rect2 = document.querySelector(".second-count .counters").getBoundingClientRect();
-
-        if (
-            (rect1.top < window.innerHeight && rect1.bottom >= 0) ||
-            (rect2.top < window.innerHeight && rect2.bottom >= 0)
-        ) {
-            if (!activated) {
-                updateCounters(counters1);
-                updateCounters(counters2);
-                activated = true;
-            }
+function updateCounter(counter, target) {
+    let count = 0;
+    const difference = target / 50; // Adjust this value for smoother animation
+    const interval = setInterval(() => {
+        if (count < target) {
+            count += difference;
+            counter.innerText = Math.round(count);
         } else {
-            if (activated) {
-                counters1.forEach(counter => {
-                    counter.innerText = 0;
-                });
-                counters2.forEach(counter => {
-                    counter.innerText = 0;
-                });
-                activated = false;
-            }
+            clearInterval(interval);
         }
+    }, 10);
+}
+
+function updateCounters() {
+    counters.forEach(counter => {
+        const target = parseInt(counter.dataset.count);
+        updateCounter(counter, target);
     });
+}
 
+function checkVisibility() {
+    const rect = document.querySelector('.counters.num').getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
-  
+    if (isVisible && !activated) {
+        updateCounters();
+        activated = true;
+    } else if (!isVisible && activated) {
+        counters.forEach(counter => {
+            counter.innerText = 0;
+        });
+        activated = false;
+    }
+}
+
+function handleScroll() {
+    window.addEventListener('scroll', () => {
+        checkVisibility();
+    });
+}
+
+// Initial check on page load
+window.addEventListener('DOMContentLoaded', () => {
+    checkVisibility();
+    handleScroll();
+});
