@@ -1,48 +1,47 @@
-const counters = document.querySelectorAll('.counters.num .counter span');
-let activated = false;
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counters.num .counter span');
+    let activated = false;
 
-function updateCounter(counter, target) {
-    let count = 0;
-    const difference = target / 50; // Adjust this value for smoother animation
-    const interval = setInterval(() => {
-        if (count < target) {
-            count += difference;
-            counter.innerText = Math.round(count);
-        } else {
-            clearInterval(interval);
+    function updateCounter(counter, target) {
+        let count = 0;
+        const difference = target / 50; // Adjust this value for smoother animation
+        
+        function incrementCounter() {
+            if (count < target) {
+                count += difference;
+                counter.innerText = Math.round(count);
+                requestAnimationFrame(incrementCounter);
+            } else {
+                counter.innerText = target; // Ensure it hits the target value
+            }
         }
-    }, 10);
-}
+        
+        incrementCounter();
+    }
 
-function updateCounters() {
-    counters.forEach(counter => {
-        const target = parseInt(counter.dataset.count);
-        updateCounter(counter, target);
-    });
-}
-
-function checkVisibility() {
-    const rect = document.querySelector('.counters.num').getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-    if (isVisible && !activated) {
-        updateCounters();
-        activated = true;
-    } else if (!isVisible && activated) {
+    function updateCounters() {
         counters.forEach(counter => {
-            counter.innerText = 0;
+            const target = parseInt(counter.getAttribute('data-count'));
+            updateCounter(counter, target);
         });
-        activated = false;
     }
-}
 
-function signupAndRedirect() {
-    var email = document.getElementById("email").value;
+    function checkVisibility() {
+        const rect = document.querySelector('.counters.num').getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
-    if (email !== "") {
-        // Redirect to the newsletter page
-        window.location.href = "newsletter_page.html";
-    } else {
-        alert("Please enter your email address.");
+        if (isVisible && !activated) {
+            updateCounters();
+            activated = true;
+        }
     }
-}
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+
+    // Initial check in case the counters are already in view on page load
+    checkVisibility();
+});
+
+
+

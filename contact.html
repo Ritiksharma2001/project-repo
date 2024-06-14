@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="animation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,7 +110,7 @@
 
       <div id="content">
             <div class="container-content" style="display: flex;">
-                <div class="row" style="text-align: left;">
+                <div class="row block" style="text-align: left;">
                     <div class="grid">
                         <div class="column">
                             <p>VILLENOIR WINES</p>
@@ -127,7 +128,7 @@
                     </div>
                 </div>     
               </div>
-              <img src="bottle.png" class="wine">
+              <img src="bottle.png" class="wine block">
             </div>
           </div>
 
@@ -136,33 +137,33 @@
             <form action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="8b093c0a-62ff-4168-ba28-780451855128">
               <p class="form-p">If you have an inquiry about our wines or services, please fill out the contact form. Thank you for sharing your comments and suggestions with us.</p>
-              <div class="input-group">
+              <div class="input-group block">
                   <input type="text" id="name" name="name" required>
                   <label for="name">Your Name</label>
               </div>
-              <div class="input-group">
+              <div class="input-group  block">
                   <input type="email" id="email" name="email" required>
                   <label for="email">Your Email</label>
               </div>
-              <div class="input-group">
+              <div class="input-group block">
                   <input type="text" id="Number" name="phone" required>
                   <label for="Number">Phone No.</label>
               </div>
-              <div class="input-group">
+              <div class="input-group block">
                   <input type="text" id="subject" name="subject" required>
                   <label for="subject">Subject</label>
               </div>
-              <div class="input-group">
+              <div class="input-group block">
                   <textarea id="message" name="message" rows="8" required></textarea>
                   <label for="message">Your Message</label>
               </div>
-              <button type="submit">SUBMIT</button>
+              <button type="submit" class="block">SUBMIT</button>
           </form>
           </div>
 
 
           <div class="footer">
-            <div class="text">
+            <div class="text block">
             <p class="fot-text">VILLENOIR PROMISE</p>
             <h1 class="fot-text-1">We make good wines</h1>
           </div>

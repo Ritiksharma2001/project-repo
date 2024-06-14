@@ -417,7 +417,6 @@ section {
   margin: 19px 15px;
 }
 /* ---------------------------------------------------- */
-
 .counters {
   position: absolute;
   bottom: 29%;
@@ -439,7 +438,6 @@ section {
   font-weight: 700;
   font-style: normal;
   font-size: 15px;
-  font-family: "Lato", sans-serif;
   color: rgb(133 98 98);
   text-transform: capitalize;
 }
@@ -460,20 +458,13 @@ section {
 }
 
 .num {
+  bottom: 101px;
   position: absolute;
-  left: 68%;
+  left: 56%;
 }
 
 .second-count {
   bottom: -26px;
-}
-
-.Login-bt {
-  line-height: 2px;
-  font-size: 12px;
-  font-weight: 700;
-  font-style: normal;
-  font-family: "Playfair Display", sans-serif;
 }
 
 button {
@@ -836,170 +827,5 @@ input {
   color: rgb(133, 98, 98);
 }
 
-
-
-
-
-
-
-/* Small Devices (Phones, 600px and down) */
-@media (max-width: 600px) {
-  .logo {
-    width: 80px;
-    margin: 5px 10px;
-    padding: 2px 2px;
-  }
-
-  nav {
-    grid-template-areas:
-      "logo"
-      "main-nav"
-      "secondary-nav";
-    margin: 0;
-  }
-
-  nav > ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10px;
-    right: 0;
-    display: inline-block;
-  }
-
-  nav > ul > li {
-    margin: 5px 0;
-    left: 0;
-  }
-
-  .img {
-    height: 40vh;
-    width: 10%;
-    right: 0;
-    top: 10px;
-  }
-
-  .card-1st {
-    width: 90%;
-    margin-left: 0;
-    height: auto;
-    top: 2%;
-  }
-
-  .section-container{
-     height: 100%;
-  }
-
-  .wine {
-    border: 2px solid white;
-    height: 10rem;
-    width: 80%;
-    margin: 10px 0;
-    height: auto;
-    top: 0;
-  }
-
-  .red-bottle-dark {
-    width: 100%;
-    height: auto;
-    right: 0;
-    top: 0;
-  }
-
-  .second-card {
-    width: 100%;
-    height: auto;
-    left: 0;
-    top: 0;
-  }
-
-  .box {
-    flex-direction: column;
-    margin: 10px;
-    height: auto;
-  }
-
-  .slide-6,
-  .tem {
-    width: 100%;
-  }
-
-  .template {
-    width: 100%;
-    margin: 0;
-  }
-
-  .second-text-card {
-    top: 2%;
-  }
-
-  .third-section {
-    height: auto;
-  }
-
-  .estate {
-    top: 5%;
-  }
-
-  .newsletter {
-    height: auto;
-  }
-
-  .input-group {
-    width: 90%;
-    left: 5%;
-  }
-
-  .newsletter-bt {
-    left: 80%;
-  }
-
-  .footer {
-    height: auto;
-  }
-
-  .second-footer {
-    height: auto;
-  }
-}
-
-/* Extra Small Devices (Very small phones, 360px and down) */
-@media (max-width: 360px) {
-  .logo {
-    width: 60px;
-    margin: 5px 5px;
-    padding: 2px 2px;
-  }
-
-  nav > ul {
-    padding: 0 5px;
-  }
-
-  .img {
-    height: 30vh;
-    width: 100%;
-  }
-
-  .card-1st {
-    width: 100%;
-    top: 1%;
-  }
-
-  .wine-img {
-    width: 90%;
-  }
-
-  .box {
-    margin: 5px;
-  }
-
-  .input-group {
-    width: 95%;
-    left: 2.5%;
-  }
-
-  .newsletter-bt {
-    left: 85%;
-  }
-}
 
 
